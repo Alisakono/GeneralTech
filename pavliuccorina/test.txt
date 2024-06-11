@@ -1,0 +1,6 @@
+db.videos.countDocuments(
+    {
+        duration_secs: { $gte: 10 * 60 },
+        tags: 'mega'
+    }
+)
