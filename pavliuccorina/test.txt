@@ -1,0 +1,12 @@
+db.videos.updateMany(
+    {
+        "duration": { "$gte": 5, "$lte": 60 }
+    },
+    {
+        "$push": {
+            "tags": {
+                "$each": ["alpha", "beta"]
+            }
+        }
+    }
+)
