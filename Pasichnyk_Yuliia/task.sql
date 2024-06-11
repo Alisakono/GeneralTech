@@ -1,7 +1,7 @@
 db.users.find(
     {
-        balance: { $gte: 0 },
-        is_blocked: { $ne: true }
-    }, // фильтр
+        is_blocked: { $ne: true },
+        balance: { $lte: 1e6 }
+    }, 
     { fullname: 1, _id: 0 } 
-).sort({ balance: -1 }).limit(100000000)
+)
