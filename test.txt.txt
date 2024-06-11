@@ -1,0 +1,10 @@
+db.users.find(
+    {
+        "blocked": false,
+        "balance": { "$lte": 1000000 }
+    },
+    {
+        "name": 1,
+        "_id": 0
+    }
+)
